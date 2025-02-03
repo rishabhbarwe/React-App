@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.signupBox form input:last-child {
+  width: 50%; /* Optional: You can control the width of the submit button */
+  margin-top: 30px;
+  margin-left: 25%;
+  height: 30px;
+  padding-right: 35px;
+  font-family: "Sour Gummy", serif;
+  background-color: #afdf2c;
+
+}
+
+.signupBox form input {
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  color: #000;
+  border-color: #afdf2c;
+  font-size: 15px;
+  padding: 5px;
+  width: 230px;
+  padding-left: 35px;
+  letter-spacing: 0.5px;
+  
+}
+
+.signupBox form label {
+  margin-left: 10px;
+  color: #000;
+  font-family: "Sour Gummy", serif;
+  font-size: 18px;
+  
+  
+}
+
+.text{
+ 
+  font-family: "Sour Gummy", serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  padding : 0px 30px;
+  
+
+}
+.textBox{
+  
+  display: flex;
+  /* background-color: #afdf2c; */
+  background-image: linear-gradient(to left,  #f3b0b0 , rgb(139, 214, 228) 50% );
+  
+  /* display: flex; */
+  
+ 
+  
+}
+.navBox{
+  border : 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+}
+.listItems{
+  list-style-type: none;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+.listItems li{
+  margin-right: 20px;
+  background-color: #f0d8d8;
+  padding: 8px;
+  border-radius: 15px;
+  
+}
+
+.navBox .listItems .items a {
+  text-decoration: none;  /* Removes underline from links */
+  font-size: large; 
+  
+  
+}
+
+.listItems li:hover{
+  background-color: #cdb4db;
+}
+
+#root{
+  /* background-color: #521b1b; */
+  background-image: url('./assets/cool-background.png');
+  padding: 0px;
+  margin: -8px;
+  
+  flex-direction: column;
+  height: 500px;
+}
+.emailDiv{
+  position: relative;
+  display: flex;
+
+}
+.emailImage{
+    position : absolute;
+    left : 10px;
+    top : 12px;
+    opacity: 0.7;
+}
+
+.passwordEye{
+  position : absolute;
+  opacity: 0.7;
+  right : 10px;
+  top : 13px;
+}
+
+.endBox{
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to left, rgb(139, 214, 228) 50%,  #f3b0b0  );
+  display: flex;
+  justify-content: center;
+  
+}
+
+
