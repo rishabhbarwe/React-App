@@ -9,9 +9,14 @@
   padding-right: 35px;
   font-family: "Sour Gummy", serif;
   background-color: #afdf2c;
+  border: none;
 
 }
 
+.signupBox form input:last-child:hover{
+  background-color: #8cb61a;
+  
+}
 .signupBox form input {
   border-radius: 10px;
   height: 20px;
@@ -39,8 +44,8 @@
 .text{
  
   font-family: "Sour Gummy", serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 22px;
   text-align: center;
   padding : 0px 30px;
   
@@ -50,7 +55,8 @@
   
   display: flex;
   /* background-color: #afdf2c; */
-  background-image: linear-gradient(to left,  #f3b0b0 , rgb(139, 214, 228) 50% );
+  justify-content: center;
+  background-image: linear-gradient(to left,  white 50%,grey  );
   
   /* display: flex; */
   
@@ -93,15 +99,16 @@
   background-color: #cdb4db;
 }
 
-#root{
-  /* background-color: #521b1b; */
-  background-image: url('./assets/cool-background.png');
-  padding: 0px;
-  margin: -8px;
-  
-  flex-direction: column;
-  height: 500px;
-}
+
+  body {
+    margin: 0; /* Removes default margin */
+    height: auto; /* Ensures the body takes the full height of the viewport */
+    background-image: url('./assets/goku.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Optional: Center the image */
+  }
+
 .emailDiv{
   position: relative;
   display: flex;
@@ -110,24 +117,30 @@
 .emailImage{
     position : absolute;
     left : 10px;
-    top : 12px;
+    top : 10px;
     opacity: 0.7;
 }
 
 .passwordEye{
   position : absolute;
-  opacity: 0.7;
+  
   right : 10px;
-  top : 13px;
+  top : 7px;
+  padding: 2px 3px;
+  border-radius: 7px;
+}
+
+.passwordEye:hover{
+  background-color: #cac8c8;
 }
 
 .endBox{
+  align-self: self-end;
   width: 100%;
   height: auto;
-  background-image: linear-gradient(to left, rgb(139, 214, 228) 50%,  #f3b0b0  );
+  background-image: linear-gradient(to left, grey 50%,  white  );
   display: flex;
   justify-content: center;
-  
 }
 
 
