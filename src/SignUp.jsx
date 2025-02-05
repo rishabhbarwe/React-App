@@ -24,7 +24,7 @@ const styles = {
     backgroundColor: 'rgba(0,0,0,0.4)',
     boxShadow: "-10px 10px 20px",
     marginBottom: "40px",
-    position : "ficed"
+    position: "ficed"
   },
   signupLabel: {
     color: '#000',
@@ -45,7 +45,7 @@ function SignUp() {
     password: '',
     email: '',
   });
-  
+
 
   const [errors, setErrors] = useState({
     fullname: '',
@@ -88,12 +88,12 @@ function SignUp() {
   }
 
   const handleSubmit = (e) => {
-    console.log('Formdata : ',formdata)
+    console.log('Formdata : ', formdata)
     e.preventDefault();
-    
+
     if (validate()) {
-      
-      navigation('/home');
+
+      navigation('/home',{state:{username : formdata.username,password : formdata.password}});
     }
   }
 
@@ -128,7 +128,7 @@ function SignUp() {
             <input id="fullname" name="fullname" placeholder='full name' value={formdata.fullname} onChange={handleChange}></input><br />
             <img src={fullname} alt="" width={20} className='emailImage' />
           </div>
-          {errors.fullname && <p style={{ color: '#d00000',padding:0,margin:'-6px',fontSize:'15px',marginLeft : '10px',fontWeight:'bold' }}>{errors.fullname}</p>}
+          {errors.fullname && <p style={{ color: '#d00000', padding: 0, margin: '-6px', fontSize: '15px', marginLeft: '10px', fontWeight: 'bold' }}>{errors.fullname}</p>}
 
 
           <label htmlFor="username" style={styles.signupLabel}>User Name</label>
@@ -138,7 +138,7 @@ function SignUp() {
 
             <img src={user} alt="" width={20} className='emailImage' />
           </div>
-          {errors.username && <p style={{ color: '#d00000',padding:0,margin:'-6px',fontSize:'15px',marginLeft : '10px',fontWeight:'bold'  }}>{errors.username}</p>}
+          {errors.username && <p style={{ color: '#d00000', padding: 0, margin: '-6px', fontSize: '15px', marginLeft: '10px', fontWeight: 'bold' }}>{errors.username}</p>}
 
           <label htmlFor="password" style={styles.signupLabel}>Password</label>
           <div className='emailDiv'>
@@ -148,8 +148,8 @@ function SignUp() {
             <img src={lock} alt="lock" width={20} className='emailImage' />
             <img src={showPasswword ? hidden : eye} alt="" width={20} className='passwordEye' onClick={handleEyeimage} />
           </div>
-          {errors.password && <p style={{ color: '#d00000' ,padding:0,margin:'-6px',fontSize:'15px',marginLeft : '10px',fontWeight:'bold' }}>{errors.password}</p>}
-          
+          {errors.password && <p style={{ color: '#d00000', padding: 0, margin: '-6px', fontSize: '15px', marginLeft: '10px', fontWeight: 'bold' }}>{errors.password}</p>}
+
 
 
           <label htmlFor="email" name="email" style={styles.signupLabel}>Email</label>
@@ -160,7 +160,7 @@ function SignUp() {
             <img src={email} alt="email" width={20} className='emailImage' />
 
           </div>
-          {errors.email && <p style={{ color: '#d00000',padding:0,margin:'-6px',marginBottom:"-20px" ,fontSize:'15px',marginLeft : '10px',fontWeight:'bold' }}>{errors.email}</p>}
+          {errors.email && <p style={{ color: '#d00000', padding: 0, margin: '-6px', marginBottom: "-20px", fontSize: '15px', marginLeft: '10px', fontWeight: 'bold' }}>{errors.email}</p>}
           <input type="submit" />
 
         </form>
